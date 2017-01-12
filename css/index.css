@@ -1,0 +1,252 @@
+@CHARSET "UTF-8";
+/*index 页面的css*/
+html,body{	
+	width:100%;
+	height:100%;
+	min-width:800px;
+	min-height:600px;
+	background:#1396ce;
+	background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#0037ac), to(#0037ac), color-stop(0.3, #5096f6), color-stop(0.5,#1396ce), color-stop(0.7, #5096f6));
+	background:-moz-linear-gradient(#0037ac, #5096f6 30%, #1396ce 50%, #5096f6 70%, #0037ac);
+	background:linear-gradient(#0037ac, #5096f6 30%, #1396ce 50%, #5096f6 70%, #0037ac);
+}
+.share-qzone{
+	width:121px;
+	height:26px;
+	display: inline-block;
+	background: url("../images/intro.gif")
+}
+/*载入区域*/
+.loading{
+	position: absolute;
+	z-index: 10000;
+	width:100%;
+	height:100%;
+	background:#fff;
+	text-align: center;
+	font-size: 36px
+}
+.loading img{
+	margin:10% auto 0
+}
+.loading .progress{
+	margin: 10% auto 0;
+	width: 60%
+}
+.loading p{
+	margin-top:50px
+}
+/*失败元素对象*/
+#failed{
+	text-align: center
+}
+#failed p{
+	color:#fff;
+	font-size: 48px;
+	text-align:center;
+	padding: 150px
+}
+/*外边的包裹*/
+#wrap,#failed,#success,#home{
+	width:1020px;
+	height:100%;
+	margin:auto;
+	background: -webkit-gradient(linear,0% 0%, 0% 100%, from(#9d5e70), to(#cd9191));
+	background:-moz-linear-gradient(#9d5e70,#cd9191);
+	background:linear-gradient(#9d5e70, #cd9191);
+	display:none;
+	overflow:hidden;
+}
+/*胜利元素css*/
+#success{
+	background: url(../images/success-bg.gif);
+	text-align: center
+}
+#success h1{
+	padding-top: 30px;
+	color:#FFFFFF;
+	font-size: 72px;
+	font-weight: bolder;
+	line-height: 1.5em;
+	text-shadow: 3px 3px 20px #E7DFAE;
+}
+.try-again,.go-home{
+	border: 0;
+	color:#2D1C08;
+	font-size: 32px;
+	line-height: 1.5em;
+	padding:10px 20px;
+	font-style: italic;
+	background: #E7DFAE;
+	border-radius: 10px;
+	cursor: pointer;
+	text-shadow: 3px 3px 20px #2D1C08;
+	box-shadow: 0px 0px 20px #E7DFAE
+}
+#success ul{
+	margin-bottom:50px
+}
+#success ul li{
+	color: #FFFFFF;
+	text-align: left;
+	text-indent: 29em;
+}
+#success ul li strong{
+	font-size: 32px;
+	color: #E7DFAE
+}
+#share-qzone-success{
+	margin:20px
+}
+/*home对象css*/
+#home{
+	display:block;
+	background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#180002), to(#180002), color-stop(0.5, #aa5709));
+	background:-moz-linear-gradient(#180002, #aa5709 50%, #180002);
+	background:linear-gradient(#180002, #aa5709 50%, #180002);
+	color:#fff;
+	font-size:40px;
+	font-weight:bold;
+	text-align:center;
+	padding-top: 20px;
+}
+#home ul{
+	margin:10px 10px
+}
+#home li{
+	float:left;
+	margin:40px 60px
+}
+#home button{
+	background:#c0eb78;
+	width:80px;
+	height:80px;
+	border-radius:10px;
+	color:#eeeaeb;
+	font-size:36px;
+	font-weight:bolder;
+	-moz-box-shadow:0px 0px 20px #e2d1ec; 
+	-webkit-box-shadow:0px 0px 20px #e2d1ec; 
+	box-shadow:0px 0px 20px #e2d1ec;
+	cursor:pointer;
+	-webkit-text-stroke: 1.0px #000000;
+	text-shadow:2px 2px 5px #333333;
+}
+#home button.click{
+	background:#c0eb00;
+}
+/*#time-wrap*/
+#time-wrap{
+	float:left;
+	width:250px
+}
+/*时间控件的css*/
+#time{
+	width:auto;
+	margin: 100px 20px 0 20px;
+	background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#a9adb0), to(#a7abae), color-stop(0.5, #cbd0d3));
+	border:#e2d1ec 3px solid;
+	border-radius:5px;
+	padding:20px 0 0;
+	-moz-box-shadow:0px 0px 20px #e2d1ec; 
+	-webkit-box-shadow:0px 0px 20px #e2d1ec; 
+	box-shadow:0px 0px 20px #e2d1ec;
+	opacity:0.8
+}
+#time:hover{
+	opacity:1
+}
+/*result css*/
+#result{
+	margin: 100px auto 0;
+	text-align:center;
+	opacity:0.6
+}
+#result:hover{
+	opacity:0.9
+}
+#result img{
+}
+/*画布元素*/
+#canvas{
+	background:#3125af;
+	padding:20px;
+	-moz-box-shadow:0px 0px 20px #4a48eb; 
+	-webkit-box-shadow:0px 0px 20px #4a48eb; 
+	box-shadow:0px 0px 20px #4a48eb;
+	border-radius: 5px;
+	margin:10px 0;
+	float:left;
+	width:552px;
+	height:552px;
+}
+#canvas img{
+	background:url(../images/background.gif);
+	border-radius: 5px;
+	width:65px;
+	cursor: pointer
+}
+#canvas img.front{
+	background:#e2dcf8;
+}
+#canvas img[rel='']{
+	cursor:auto
+}
+#canvas table td{
+	padding:1px 2px;
+	-moz-box-shadow:0px 0px 20px #3D30E2; -webkit-box-shadow:0px 0px 20px #3D30E2; box-shadow:0px 0px 20px #3D30E2;
+}
+/*wall-warp css*/
+#wall-warp{
+	float:left;
+	margin-left:20px
+}
+#score-panel{
+	width:135px;
+	background:#495647;
+	border:5px #c9b6cc solid;
+	margin-top:50px;
+	-moz-box-shadow:0px 0px 20px #e2d1ec; 
+	-webkit-box-shadow:0px 0px 20px #e2d1ec; 
+	box-shadow:0px 0px 20px #e2d1ec;
+	border-radius:5px;
+	color:#bdc3bd;
+	font-weight:bold;
+	font-size:24px;
+	opacity:0.8
+}
+#score-panel:hover{
+	opacity:1
+}
+#score-panel table{
+	margin:auto;
+	line-height:2em
+}
+#score-panel table tr{
+	margin:10px 0
+}
+#help{
+	margin-top:50px;
+}
+#help img{
+	display:block;
+	opacity:0.6
+}
+#help img:hover{
+	opacity:0.9
+}
+#go-home{
+	background:url(../images/home-btn.png);
+	border:0;
+	height:65px;
+	width:130px;
+	margin-top:30px;
+	cursor:pointer;
+	opacity:0.6
+}
+#go-home:hover{
+	opacity:0.9
+}
+#wall-warp img{
+	width:120px
+}
